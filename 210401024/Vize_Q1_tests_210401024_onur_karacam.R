@@ -11,3 +11,7 @@ test_that("spotify_token degikeni Global Workspace'de tanimli mi", {
   expect_true(exists("spotify_token"))
 })
 
+#1.2
+test_that("spotify_token degiskeni bir fonksiyon mu", {
+  expect_type(spotify_token, "closure")
+})
