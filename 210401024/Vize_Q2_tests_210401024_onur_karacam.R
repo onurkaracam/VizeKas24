@@ -22,3 +22,9 @@ test_that("spotify_search_artist() herhangi bir artist ismi ile cagrildiginda do
   result <- spotify_search_artist("Motive")
   expect_true(is.list(result))
 })
+
+# Test 2.4
+test_that("spotify_search_artist cagrildiginda dondurdugu listenin iki elementi mi var", {
+  result <- spotify_search_artist("Motive")
+  expect_equal(length(result), 2)
+})
