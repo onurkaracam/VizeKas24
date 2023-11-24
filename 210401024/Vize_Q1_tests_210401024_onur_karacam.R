@@ -21,3 +21,10 @@ test_that("spotify_token fonksiyonu bir liste dondurur mu", {
   token <- spotify_token()
   expect_is(token, "list")
 })
+
+#1.4
+test_that("spotify_token fonk iki elemanli bir fonk mu", {
+  token <- spotify_token()
+  expect_is(token, "list")
+  expect_length(token, 2)
+})
