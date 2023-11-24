@@ -55,3 +55,10 @@ test_that("spotify_token fonksiyonu ikinci elemaninin ismi token mi", {
   expect_is(token, "list")
   expect_equal(names(token)[2], "token")
 })
+
+#1.9
+test_that("spotify_token fonksiyonu ikinci elemaninin sinifi character mi", {
+  token <- spotify_token()
+  expect_is(token, "list")
+  expect_type(token$token, "character")
+})
