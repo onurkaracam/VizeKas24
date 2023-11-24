@@ -62,3 +62,10 @@ test_that("spotify_token fonksiyonu ikinci elemaninin sinifi character mi", {
   expect_is(token, "list")
   expect_type(token$token, "character")
 })
+
+#1.10
+test_that("spotify_token fonksiyonu ikinci elemani 'Bearer ' ile basliyor mu", {
+  token <- spotify_token()
+  expect_is(token, "list")
+  expect_true(startsWith(token$token, "Bearer "))
+})
