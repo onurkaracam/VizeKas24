@@ -15,3 +15,10 @@ test_that("Global Workspace 'spotify_search_artist' degiskenine sahip mi", {
 test_that("'spotify_search_artist' degiskeninin tipi function mi", {
   expect_equal(typeof(spotify_search_artist), "closure")
 })
+
+# Test 2.3
+test_that("spotify_search_artist() herhangi bir artist ismi ile cagrildiginda dondurdugu cikti bir liste mi
+", {
+  result <- spotify_search_artist("Motive")
+  expect_true(is.list(result))
+})
