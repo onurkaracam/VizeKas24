@@ -41,3 +41,10 @@ test_that("spotify_token fonksiyonu dondurdugu listenin ilk elementinin class'i 
   #numeric degil
   expect_equal(class(token_result$status_code), "integer")
 })
+
+#1.7
+test_that("spotify_token fonksiyonu status_code elemaninin degeri 200 mu", {
+  token <- spotify_token()
+  expect_is(token, "list")
+  expect_equal(token$status_code, 200)
+})
