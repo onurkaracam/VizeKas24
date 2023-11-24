@@ -28,3 +28,9 @@ test_that("spotify_search_artist cagrildiginda dondurdugu listenin iki elementi 
   result <- spotify_search_artist("Motive")
   expect_equal(length(result), 2)
 })
+
+# Test 2.5
+test_that("spotify_search_artist cagrildiginda dondurdugu listenin ilk elementinin ismi 'status_code' mu", {
+  result <- spotify_search_artist("Shakira")
+  expect_equal(names(result)[1], "status_code")
+})
