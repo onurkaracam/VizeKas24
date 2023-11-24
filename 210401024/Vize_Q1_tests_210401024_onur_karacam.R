@@ -28,3 +28,9 @@ test_that("spotify_token fonk iki elemanli bir fonk mu", {
   expect_is(token, "list")
   expect_length(token, 2)
 })
+
+#1.5
+test_that("spotify_token fonksiyonu dondurdugu listenin ilk elementinin ismi status_code mu", {
+  token_result <- spotify_token()
+  expect_true("status_code" %in% names(token_result))
+})
