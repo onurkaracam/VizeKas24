@@ -10,3 +10,8 @@ source(relative_path)
 test_that("Global Workspace 'spotify_search_artist' degiskenine sahip mi", {
   expect_true(exists("spotify_search_artist", envir = .GlobalEnv))
 })
+
+# Test 2.2
+test_that("'spotify_search_artist' degiskeninin tipi function mi", {
+  expect_equal(typeof(spotify_search_artist), "closure")
+})
