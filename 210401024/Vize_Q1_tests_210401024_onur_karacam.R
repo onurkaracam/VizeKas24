@@ -34,3 +34,10 @@ test_that("spotify_token fonksiyonu dondurdugu listenin ilk elementinin ismi sta
   token_result <- spotify_token()
   expect_true("status_code" %in% names(token_result))
 })
+
+#1.6
+test_that("spotify_token fonksiyonu dondurdugu listenin ilk elementinin class'i numeric mi", {
+  token_result <- spotify_token()
+  #numeric degil
+  expect_equal(class(token_result$status_code), "integer")
+})
