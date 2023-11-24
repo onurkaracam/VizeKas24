@@ -48,3 +48,10 @@ test_that("spotify_token fonksiyonu status_code elemaninin degeri 200 mu", {
   expect_is(token, "list")
   expect_equal(token$status_code, 200)
 })
+
+#1.8
+test_that("spotify_token fonksiyonu ikinci elemaninin ismi token mi", {
+  token <- spotify_token()
+  expect_is(token, "list")
+  expect_equal(names(token)[2], "token")
+})
